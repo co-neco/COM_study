@@ -1,0 +1,15 @@
+import "unknwn.idl";
+
+[
+	object,
+	uuid("F24C4FC4-3667-421D-A144-0AC0DF90D0AF"),
+	helpstring("Calculator interface"),
+	pointer_default(unique)
+]
+interface IRPNCalculator : IUnknown
+{
+	HRESULT push([in] double value);
+	HRESULT pop([out] double* value);
+	HRESULT add();
+	HRESULT subtract();
+};
